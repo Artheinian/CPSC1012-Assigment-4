@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\CPSC1012\\Github\\CPSC1012-Assigment-4\\Assignment4\\Assignment4.csproj",
+      "projectUniqueName": "D:\\CPSC1012\\Github\\CPSC1012-Assigment-4\\Assignment4\\Assignment4.csproj",
       "projectName": "Assignment4",
-      "projectPath": "F:\\CPSC1012\\Github\\CPSC1012-Assigment-4\\Assignment4\\Assignment4.csproj",
+      "projectPath": "D:\\CPSC1012\\Github\\CPSC1012-Assigment-4\\Assignment4\\Assignment4.csproj",
       "packagesPath": "C:\\Users\\rejec\\.nuget\\packages\\",
-      "outputPath": "F:\\CPSC1012\\Github\\CPSC1012-Assigment-4\\Assignment4\\obj\\",
+      "outputPath": "D:\\CPSC1012\\Github\\CPSC1012-Assigment-4\\Assignment4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rejec\\AppData\\Roaming\\NuGet\\NuGet.Config"
