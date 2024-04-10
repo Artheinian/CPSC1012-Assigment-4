@@ -5,11 +5,6 @@ using Clients;
 Client myClient = new();
 List<Client> listOfClients = [];
 
-string previousFirstName = myClient.FirstName;
-string previousLastName = myClient.LastName;
-double previousWeight = myClient.Weight;
-double previousHeight = myClient.Height;
-
 string customPrompt = "";
 
 bool loopAgain = true;
@@ -37,23 +32,35 @@ bool loopAgain = true;
                   string editMenuChoice = Prompt("\nEnter an Edit Choice: ").ToUpper();
                   if (editMenuChoice == "F")
                     {
-                    customPrompt = "Enter a New First Name:";
+                     customPrompt = "Enter a New First Name:";
                      GetFirstName(myClient, customPrompt);
-                     Console.WriteLine($"\nClient First Name has heen edited to {myClient.FirstName}. ");
+                     Console.WriteLine($"\nClient's First Name has heen edited to {myClient.FirstName}. ");
 
                      customPrompt = " ";
                     }
                   else if (editMenuChoice == "L")
                   {
+                    customPrompt = "Enter a New Last Name:";
                     GetLastName(myClient);
+                    Console.WriteLine($"\nClien' Last Name has heen edited to {myClient.LastName}. ");
+
+                     customPrompt = " ";
                   }
                   else if (editMenuChoice == "W")
                   {
+                    customPrompt = "Enter a New Weight Name:";
                      GetWeight(myClient);
+                     Console.WriteLine($"\nClient's Weight has heen edited to {myClient.Weight}. ");
+
+                     customPrompt = " ";
                   }
                   else if (editMenuChoice == "H")
                   {
+                    customPrompt = "Enter a New Height Name:";
                      GetHeight(myClient);
+                     Console.WriteLine($"\nClient's Height has heen edited to {myClient.Height}. ");
+
+                     customPrompt = " ";
                   }
                   else if (editMenuChoice == "R")  
                   {
@@ -130,9 +137,9 @@ Client NewClient()
 
     
     GetFirstName(myClient, "Enter Client First Name: ");
-    GetLastName(myClient);
-    GetWeight(myClient);
-    GetHeight(myClient);
+    GetLastName(myClient, "Enter Client Last Name: ");
+    GetWeight(myClient, "Enter Client Weight Name: ");
+    GetHeight(myClient, "Enter Client Height Name: ");
 
     Console.WriteLine("Client succesfully have been born. ");
 
