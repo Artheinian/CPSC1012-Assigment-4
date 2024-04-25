@@ -86,13 +86,11 @@ LoadFileValuesToMemory(listOfClients);
        }
        else if (mainMenuChoice == "F")
        {
-        //  myClient = FindClientInList(listOfClients);
-        Console.WriteLine("You picked F!");
+          myClient = FindClientInList(listOfClients);
        }
        else if (mainMenuChoice == "R")
        {
-        //  RemoveClientFromList(myClient, listOfClients);
-        Console.WriteLine("You picked R!");
+         RemoveClientFromList(myClient, listOfClients);
        }
       else if (mainMenuChoice == "Q")
         {
@@ -232,6 +230,30 @@ void DisplayAllClientInList(List<Client> listOfClients)
   foreach(Client client in listOfClients)
       ShowClientInfo(client);
 }
+
+Client FindClientInList(List<Client> listofClients){
+    string myString = Prompt($"Enter Partial Client Name: ");
+    foreach(Client client in listofClients)
+    {
+      if(client.FirstName.Contains(myString))
+      {
+            return client;
+      }
+    }
+    Console.WriteLine($"No Clients Match");
+	  return null;
+}
+
+
+void RemoveClientFromList(Client myClient, List<Client> listOfPets)
+{
+	
+	if(myClient == null)
+		throw new Exception($"No Client provided to remove from list");
+	listOfClients.Remove(myClient);
+	Console.WriteLine($"Client Removed");
+}
+
 
 void LoadFileValuesToMemory(List<Client> listOfClients)
 {
